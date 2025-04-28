@@ -1,34 +1,36 @@
-# Sistema de Monitoramento de Velocidade de Veículos
+Controle de Velocidade de Veículos 🚗💨
+Este é um projeto simples em Python para controle de velocidade de veículos.
+Ele permite cadastrar veículos com suas respectivas velocidades, verifica se estão dentro dos limites permitidos e gera um relatório com o status e o valor da multa (se houver).
 
-Este é um sistema simples de monitoramento de velocidade de veículos. Ele permite adicionar veículos com suas respectivas placas e velocidades, verificar se estão dentro, acima ou abaixo do limite de velocidade e calcular a multa quando necessário.
+📋 Funcionalidades
+Adicionar veículos informando a placa e a velocidade.
 
-## Descrição
+Verificar se a velocidade está:
 
-O sistema possui as seguintes funcionalidades:
-- Adicionar veículos, fornecendo a placa e a velocidade.
-- Verificar a velocidade de cada veículo em relação ao limite de velocidade estabelecido.
-- Exibir um relatório com as informações dos veículos, como placa, status (dentro do limite, acima ou abaixo do limite) e o valor da multa (se houver).
-- Opção para sair do programa.
+Acima do limite (multa proporcional).
 
-## Limites de Velocidade
+Abaixo do limite (multa fixa).
 
-- **Limite máximo de velocidade**: 110 km/h
-- **Limite mínimo de velocidade**: 60 km/h
+Dentro do limite (sem multa).
 
-Se a velocidade do veículo for acima de 110 km/h, o sistema calculará uma multa proporcional à quantidade de km/h excedidos. A multa é definida como 400% do valor excedente da velocidade.
+Exibir um relatório completo de todos os veículos registrados.
 
-## Como usar
+Menu interativo para fácil navegação.
 
-### Menu de opções:
-1. **Adicionar veículo**: Permite inserir a placa e a velocidade de um veículo.
-2. **Exibir relatório de veículos**: Exibe um relatório com a placa, status e a multa (se aplicável) de todos os veículos cadastrados.
-3. **Sair**: Finaliza o programa.
+⚙️ Como Funciona
+Limite máximo de velocidade: 110 km/h
 
-### Exemplo de uso:
-```python
-Digite a placa do veículo: ABC1234
-Digite a velocidade do veículo: 120
-Veículo adicionado com sucesso!
+Limite mínimo de velocidade: 60 km/h
 
-Relatório de Veículos:
-Placa: ABC1234, Status: acima do limite, Multa: R$ 40.00
+Multa para velocidade acima do limite: 400% da diferença entre a velocidade registrada e o limite máximo.
+
+Multa para velocidade abaixo do limite: R$ 40,00 (valor fixo).
+
+Velocidade dentro dos limites: Sem multa.
+
+🧩 Estrutura do Código
+verificar_velocidade(placa, velocidade): Função que analisa a velocidade e retorna o status e valor da multa.
+
+exibir_menu(): Exibe as opções de interação no terminal.
+
+Loop principal (if __name__ == "__main__") para gerenciar a execução do programa.
